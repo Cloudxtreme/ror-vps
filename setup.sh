@@ -86,6 +86,6 @@ echo
 nginx_install_with_passenger_module
 echo
 echo "==============================================================================="
-echo -e $blue "Pronto!"
+echo -e $blue "Pronto!" $end_color
 echo "==============================================================================="
 
