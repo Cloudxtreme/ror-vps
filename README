@@ -1,0 +1,7 @@
+===============================================================================
+Instalação e Configuração de  um ambiente ROR em uma vpc linux (Ubuntu 10.04)
+
+-> Instala Ruby 1.9.3p0
+-> Instala o passenger (last version)
+-> Instala e configura o nginx a partir dos repositórios do ubuntu
+
