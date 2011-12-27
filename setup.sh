@@ -49,40 +49,24 @@ function nginx_download {
   rm "$NGINX_VERSION.tar.gz"
 }
 
+function module_up_download {
+  cd /tmp
+  git clone git://github.com/masterzen/nginx-upload-progress-module.git
+  mv nginx-upload-progress-module/ up/
+}
+
+
 function nginx_install_with_passenger_module {
-  passenger-install-nginx-module --auto --nginx-soucer-dir=/tmp/$NGINX_VERSION
+  rvmsudo passenger-install-nginx-module --auto --nginx-source-dir=/tmp/$NGINX_VERSION --prefix=/opt/nignx --extra-configure-flags='--add-module=/tmp/up'
 }
 
 #Running
 
 #Updating system
-echo "==============================================================================="
+echo "-------------------------------------------------------------------------------"
+echo -e $green "Iniciando..." $end_color
 echo
-echo -e $green'Atualizando o sistema...'$end_color
-echo
-system_update
-echo
-echo -e $green "Baixando e instalando o Ruby" $end_color
-echo
-ruby_install
-echo
-echo "Versões instaladas"
-echo -e $red
-ruby -v
-echo
-gem -v
-echo -e $end_color
-echo
-echo -e $green "Baixando e instalando o Passenger" $fim_cor
-echo
-passenger_install
-echo
-echo -e $green "Baixando o Nginx" $end_color
-echo
-nginx_download
-echo
-echo -e $green "Instalando o Nginx com o módulo do Passenger" $end_color
-echo
+module_up_download
 nginx_install_with_passenger_module
 echo
 echo "==============================================================================="
