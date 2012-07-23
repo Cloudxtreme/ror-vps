@@ -5,8 +5,10 @@
 
 #Definitions
 
-RUBY_VERSION="ruby-1.9.3-p0"
-NGINX_VERSION="nginx-1.0.11"
+# RUBY_VERSION="ruby-1.9.3-p0"
+# NGINX_VERSION="nginx-1.0.11"
+RUBY_VERSION="ruby-1.9.3-p194"
+NGINX_VERSION="nginx-1.3.3"
 
 #Variables
 
