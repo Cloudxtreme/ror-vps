@@ -38,11 +38,11 @@ echo -e $green "Starting..." $end_color
 echo
 echo -e $green "Updating the system..." $end_color
 echo
-system_update();
+system_update
 echo
 echo -e $green "Instaling $RUBY_VERSION" $end_color
 echo
-ruby_install();
+ruby_install
 echo
 echo "==============================================================================="
 echo -e $blue "Pronto!" $end_color
