@@ -4,7 +4,7 @@
 
 #Definitions
 
-NGINX_VERSION="nginx-1.3.3"
+NGINX_VERSION="nginx-1.0.11"
 
 #Variables
 
@@ -42,9 +42,7 @@ function nginx_install_with_passenger_module {
 echo "-------------------------------------------------------------------------------"
 echo -e $green "Starting..." $end_color
 echo
-echo -e $green "Updating the system..." $end_color
-echo
-passenger_install
+#passenger_install
 echo
 echo -e $green "Downloading o nginx..." $end_color
 echo
