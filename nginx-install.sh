@@ -16,7 +16,7 @@ end_color="\033[00m"
 #functions
 
 function passenger_install {
-  gem install passenger --no-ri --no-rdoc
+ sudo gem install passenger --no-ri --no-rdoc
 }
 
 function nginx_download {
