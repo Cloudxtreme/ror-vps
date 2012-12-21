@@ -2,7 +2,7 @@
 
 #This script needs of chmod +wx
 
-RUBY_VERSION="ruby-1.9.3-p194"
+RUBY_VERSION="ruby-1.9.3-p327"
 
 #Variables
 
